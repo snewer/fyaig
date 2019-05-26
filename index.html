@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title>2 вариант</title>
+</head>
+<body>
+
+<textarea id="message" cols="40" rows="10">
+
+  /* привет! */
+
+  011
+  011111
+  bc10101010011111bc011 /* тут слитые слова разных типов */
+  bca
+  babcde
+
+  /* еще коммент! */
+
+</textarea>
+<br>
+<input type="button" value="Go!" id="process">
+
+</body>
+<script src="analyzer.js"></script>
+<script>
+
+    var messageEl = document.getElementById('message');
+    var buttonEl = document.getElementById('process');
+
+    buttonEl.onclick = function () {
+        var words = analyzer(messageEl.value);
+        console.log(words);
+    };
+
+</script>
+</html>
